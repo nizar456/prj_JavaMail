@@ -1,12 +1,16 @@
 package com.example;
 
+import com.example.modeles.Demande;
 import com.example.modeles.Etudiant;
 import com.example.services.ServiceEnvoi;
+import com.example.services.ServiceReception;
+
+import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         // 1. Créer un étudiant
         Etudiant etudiant = new Etudiant(
                 "E001",
@@ -24,6 +28,15 @@ public class Main {
 
         // 4. Envoyer la convocation
         service.envoyerConvocation(etudiant, dateExamen, salle);
+    }*/
+    public static void main(String[] args) {
+        ServiceReception service = new ServiceReception();
+        List<Demande> demandes = service.lireDemandesNonLues();
+
+        for (Demande d : demandes) {
+            System.out.println(d);
+        }
     }
+
 
 }
