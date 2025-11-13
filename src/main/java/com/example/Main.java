@@ -29,13 +29,17 @@ public class Main {
         // 4. Envoyer la convocation
         service.envoyerConvocation(etudiant, dateExamen, salle);
     }*/
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         ServiceReception service = new ServiceReception();
         List<Demande> demandes = service.lireDemandesNonLues();
 
         for (Demande d : demandes) {
             System.out.println(d);
         }
+    }*/
+    public static void main(String[] args) {
+        ServiceReception service = new ServiceReception();
+        service.afficherStatistiques();
     }
 
 
